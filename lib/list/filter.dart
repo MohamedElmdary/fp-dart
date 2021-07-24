@@ -1,11 +1,11 @@
 import 'package:fp/types/curryFn.dart';
 
-List<T> filter<T>(List<T> l, bool Function(T) p) {
+List<T> filter<T>(List<T> list, bool Function(T) predicate) {
   final List<T> res = [];
   int i = -1;
-  while (++i < l.length) {
-    if (p(l[i])) {
-      res.add(l[i]);
+  while (++i < list.length) {
+    if (predicate(list[i])) {
+      res.add(list[i]);
     }
   }
   return res;
