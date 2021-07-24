@@ -1,4 +1,4 @@
-double mean<T extends num>(List<T> list) {
+double mean(List<num> list) {
   if (list.length == 0) {
     return double.nan;
   }

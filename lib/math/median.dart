@@ -1,11 +1,11 @@
 import 'modulo.dart';
 
-double median<T extends num>(List<T> list) {
+double median(List<num> list) {
   if (list.length == 0) {
     return double.nan;
   }
 
-  final List<T> clone = list.sublist(0);
+  final List<num> clone = list.sublist(0);
   clone.sort((a, b) => a > b ? 1 : -1);
 
   if (modulo(clone.length.toDouble(), 2) == 0) {
