@@ -1,13 +1,30 @@
-import 'package:fp/curry/curry2.dart';
+import 'package:fp/types/curryFn.dart';
 
-List<R> map<T, R>(List<T> list, R Function(T, int) mapper) {
-  int i = 0;
+List<R> _map<T, R>(List<T> list, R Function(T) mapper) {
   final List<R> res = [];
-  while (i < list.length) {
-    res.add(mapper(list[i], i++));
+  int i = -1;
+  while (++i < list.length) {
+    res.add(mapper(list[i]));
   }
   return res;
 }
 
-final mapC = curry2(map);
-final mapCR = curry2R(map);
+List<R> map<T, R>(List<T> list, R Function(T) mapper) {
+  return _map(list, mapper);
+}
+
+CurryFn<R Function(T), List<R>> mapC<T, R>(List<T> list) {
+  List<R> next(R Function(T) mapper) {
+    return _map(list, mapper);
+  }
+
+  return next;
+}
+
+CurryFn<List<T>, List<R>> mapCR<T, R>(R Function(T) mapper) {
+  List<R> next(List<T> list) {
+    return _map(list, mapper);
+  }
+
+  return next;
+}
