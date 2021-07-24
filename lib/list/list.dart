@@ -7,3 +7,5 @@ export 'concat.dart';
 export 'contains.dart';
 export 'drop.dart';
 export 'dropLast.dart';
+export 'dropLastWhile.dart';
+export 'dropWhile.dart';
