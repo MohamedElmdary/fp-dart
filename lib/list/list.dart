@@ -9,3 +9,5 @@ export 'drop.dart';
 export 'dropLast.dart';
 export 'dropLastWhile.dart';
 export 'dropWhile.dart';
+export 'findIndex.dart';
+export 'find.dart';
