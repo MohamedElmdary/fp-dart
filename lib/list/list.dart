@@ -11,3 +11,5 @@ export 'dropLastWhile.dart';
 export 'dropWhile.dart';
 export 'findIndex.dart';
 export 'find.dart';
+export 'findLastIndex.dart';
+export 'findLast.dart';
