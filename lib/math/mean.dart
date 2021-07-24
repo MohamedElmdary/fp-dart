@@ -1,6 +1,7 @@
-double mean(List<double> list) {
+double mean<T extends num>(List<T> list) {
   if (list.length == 0) {
     return double.nan;
   }
-  return list.fold<double>(0, (total, current) => total + current) / list.length;
+  final total = list.fold<double>(0, (total, current) => total + current);
+  return total / list.length;
 }

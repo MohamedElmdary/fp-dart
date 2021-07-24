@@ -1,3 +1,3 @@
 import 'multiply.dart';
 
-double product(List<double> list) => list.fold(1, multiply);
+double product<T extends num>(List<T> list) => list.fold(1, multiply);

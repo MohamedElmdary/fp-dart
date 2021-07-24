@@ -1,5 +1,5 @@
-import 'package:fp/curry/curry2.dart';
+import 'package:fp/fp.dart';
 
-double multiply(double x, double y) => x * y;
-final multiplyC = curry2(multiply);
-final multiplyCR = curry2R(multiply);
+double multiply<T extends num>(T x, T y) => x.toDouble() * y.toDouble();
+
+CurryFn<T, double> multiplyC<T extends num>(T x) => (T y) => multiply(x, y);

@@ -1,1 +1,1 @@
-double negate(double x) => -x;
+double negate<T extends num>(T x) => -(x.toDouble());
