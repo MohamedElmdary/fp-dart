@@ -25,3 +25,4 @@ export 'mergeAll.dart';
 export 'partition.dart';
 export 'pluck.dart';
 export 'range.dart';
+export 'reduceRight.dart';
