@@ -13,3 +13,4 @@ export 'findIndex.dart';
 export 'find.dart';
 export 'findLastIndex.dart';
 export 'findLast.dart';
+export 'flatten.dart';
