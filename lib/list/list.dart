@@ -21,3 +21,4 @@ export 'insertAll.dart';
 export 'intersperse.dart';
 export 'join.dart';
 export 'reduce.dart';
+export 'mergeAll.dart';
