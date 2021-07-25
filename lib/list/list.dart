@@ -17,3 +17,4 @@ export 'flatten.dart';
 export 'forEach.dart';
 export 'fromPairs.dart';
 export 'groupBy.dart';
+export 'insertAll.dart';
