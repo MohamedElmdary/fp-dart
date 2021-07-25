@@ -20,4 +20,3 @@ export 'groupBy.dart';
 export 'insertAll.dart';
 export 'intersperse.dart';
 export 'join.dart';
-export 'juxt.dart';
