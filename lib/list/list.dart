@@ -23,3 +23,4 @@ export 'join.dart';
 export 'reduce.dart';
 export 'mergeAll.dart';
 export 'partition.dart';
+export 'pluck.dart';
