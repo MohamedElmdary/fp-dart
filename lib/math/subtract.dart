@@ -1,4 +1,4 @@
-import 'package:fp/fp.dart';
+import 'package:fp/curry/curry2.dart';
 
 double subtract(num x, num y) => x.toDouble() - y.toDouble();
 
