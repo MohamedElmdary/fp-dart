@@ -15,3 +15,4 @@ export 'findLastIndex.dart';
 export 'findLast.dart';
 export 'flatten.dart';
 export 'forEach.dart';
+export 'fromPairs.dart';
