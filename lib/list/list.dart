@@ -16,3 +16,4 @@ export 'findLast.dart';
 export 'flatten.dart';
 export 'forEach.dart';
 export 'fromPairs.dart';
+export 'groupBy.dart';
