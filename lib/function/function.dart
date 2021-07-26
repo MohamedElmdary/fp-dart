@@ -3,3 +3,4 @@ export 'pipe.dart';
 export 'juxt.dart';
 export 'memoize.dart';
 export 'constant.dart';
+export 'sort.dart';
