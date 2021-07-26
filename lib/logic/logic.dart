@@ -10,3 +10,6 @@ export 'isEmpty.dart';
 export 'propSatisfies.dart';
 export 'unless.dart';
 export 'until.dart';
+export 'complement.dart';
+export 'toBool.dart';
+export 'xor.dart';
