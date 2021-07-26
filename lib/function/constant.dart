@@ -1,9 +1,12 @@
-T Function() constant<T>(T value) {
+import 'package:fp/types/types.dart';
+import 'package:fp/utils/utils.dart';
+
+IgnoreArgs<T> constant<T>(T value) {
   T next() {
     return value;
   }
 
-  return next;
+  return ignoredNext<T>(next);
 }
 
 final always = constant;
