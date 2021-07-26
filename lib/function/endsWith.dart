@@ -1,4 +1,5 @@
-import 'package:fp/fp.dart';
+
+import 'package:fp/curry/curry2.dart';
 
 bool endsWith(dynamic w, dynamic idxable) {
   if (
