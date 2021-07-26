@@ -7,3 +7,5 @@ T Function() constant<T>(T value) {
 }
 
 final always = constant;
+final F = constant(false);
+final T = constant(true);
