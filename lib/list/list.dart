@@ -27,3 +27,4 @@ export 'pluck.dart';
 export 'range.dart';
 export 'reduceRight.dart';
 export 'zip.dart';
+export 'transduce.dart';
