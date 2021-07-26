@@ -28,3 +28,4 @@ export 'range.dart';
 export 'reduceRight.dart';
 export 'zip.dart';
 export 'transduce.dart';
+export 'xprod.dart';
