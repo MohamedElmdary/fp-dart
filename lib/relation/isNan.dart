@@ -1,3 +1,3 @@
-bool isNan(num maybeNan) {
+bool isNan(dynamic maybeNan) {
   return maybeNan.toString() == "NaN";
 }
