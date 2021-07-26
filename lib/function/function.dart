@@ -7,3 +7,4 @@ export 'sort.dart';
 export 'endsWith.dart';
 export 'of.dart';
 export 'once.dart';
+export 'tap.dart';
