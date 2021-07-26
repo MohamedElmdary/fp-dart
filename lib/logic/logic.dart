@@ -9,3 +9,4 @@ export 'defaultTo.dart';
 export 'isEmpty.dart';
 export 'propSatisfies.dart';
 export 'unless.dart';
+export 'until.dart';
