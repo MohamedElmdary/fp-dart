@@ -29,3 +29,4 @@ export 'reduceRight.dart';
 export 'zip.dart';
 export 'transduce.dart';
 export 'xprod.dart';
+export 'removeAt.dart';
