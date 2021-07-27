@@ -5,3 +5,4 @@ export 'clone.dart';
 export 'set.dart';
 export 'dissoc.dart';
 export 'dissocPath.dart';
+export 'eqProps.dart';
