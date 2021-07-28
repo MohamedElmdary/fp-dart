@@ -9,3 +9,4 @@ export 'of.dart';
 export 'once.dart';
 export 'tap.dart';
 export 'copy.dart';
+export 'deepCopy.dart';
