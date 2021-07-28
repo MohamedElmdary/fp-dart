@@ -1,4 +1,3 @@
-import 'package:fp/function/function.dart';
 import 'package:fp/list/list.dart';
 
 dynamic deepCopy(dynamic object) {
