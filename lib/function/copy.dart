@@ -6,7 +6,7 @@ T copy<T>(T value) {
   }
 
   if (value is List) {
-    return value.sublist(0) as T;
+    return [...value] as T;
   }
 
   if (value is Set) {
