@@ -1,7 +1,8 @@
+import 'package:fp/list/copyList.dart';
 import 'package:fp/types/curryFn.dart';
 
 List<T> sort<T>(int Function(T, T) sorter, List<T> list) {
-  final List<T> res = list.sublist(0);
+  final List<T> res = copyList(list);
   res.sort(sorter);
   return res;
 }

@@ -1,3 +1,4 @@
+import 'package:fp/list/copyList.dart';
 import 'modulo.dart';
 
 double median(List<num> list) {
@@ -5,7 +6,7 @@ double median(List<num> list) {
     return double.nan;
   }
 
-  final List<num> clone = list.sublist(0);
+  final List<num> clone = copyList(list);
   clone.sort((a, b) => a > b ? 1 : -1);
 
   if (modulo(clone.length.toDouble(), 2) == 0) {

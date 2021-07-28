@@ -1,4 +1,5 @@
 import 'package:fp/curry/curry2.dart';
+import 'package:fp/list/copyList.dart';
 
 List removeAt(int index, List list) {
   int k = index;
@@ -6,7 +7,7 @@ List removeAt(int index, List list) {
     k = list.length + k;
   }
 
-  final res = list.sublist(0);
+  final res = copyList(list);
   res.removeAt(k);
 
   return res;

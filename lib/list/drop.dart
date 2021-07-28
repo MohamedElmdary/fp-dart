@@ -1,10 +1,17 @@
 import 'package:fp/types/curryFn.dart';
 
 List<T> drop<T>(List<T> list, int length) {
+  final List<T> res = [];
+
   if (length >= list.length) {
-    return [];
+    return res;
   }
-  return list.sublist(length);
+
+  int i = length;
+  while (i < list.length) {
+    res.add(list[i++]);
+  }
+  return res;
 }
 
 CurryFn<int, List<T>> dropC<T>(List<T> list) {

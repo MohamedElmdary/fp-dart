@@ -1,10 +1,18 @@
 import 'package:fp/types/curryFn.dart';
 
 List<T> dropLast<T>(List<T> list, int length) {
+  final List<T> res = [];
+
   if (length >= list.length) {
-    return [];
+    return res;
   }
-  return list.sublist(0, length);
+
+  final _l = list.length - length;
+  int i = -1;
+  while (++i < _l) {
+    res.add(list[i]);
+  }
+  return res;
 }
 
 CurryFn<int, List<T>> dropLastC<T>(List<T> list) {
