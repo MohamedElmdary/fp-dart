@@ -10,3 +10,5 @@ export 'once.dart';
 export 'tap.dart';
 export 'copy.dart';
 export 'deepCopy.dart';
+export 'ascend.dart';
+export 'descend.dart';
