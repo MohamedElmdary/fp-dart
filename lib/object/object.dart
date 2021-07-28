@@ -6,3 +6,5 @@ export 'set.dart';
 export 'dissoc.dart';
 export 'dissocPath.dart';
 export 'eqProps.dart';
+export 'copyMap.dart';
+export 'copySet.dart';
