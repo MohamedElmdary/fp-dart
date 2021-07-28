@@ -1,16 +1,18 @@
-import 'package:fp/object/object.dart';
+import 'package:fp/list/copyList.dart';
+import 'package:fp/object/copyMap.dart';
+import 'package:fp/object/copySet.dart';
 
-T copy<T>(T value) {
+dynamic copy(dynamic value) {
   if (value is Map) {
-    return clone(value) as T;
+    return copyMap(value);
   }
 
   if (value is List) {
-    return [...value] as T;
+    return copyList(value);
   }
 
   if (value is Set) {
-    return value.toSet() as T;
+    return copySet(value);
   }
 
   return value;

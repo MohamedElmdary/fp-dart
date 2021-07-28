@@ -1,8 +1,8 @@
+import 'package:fp/object/copyMap.dart';
 import 'package:fp/types/curryFn.dart';
-import 'clone.dart';
 
 Map<K, V> assoc<K, V>(K key, V value, Map<K, V> object) {
-  final Map<K, V> res = clone(object);
+  final Map<K, V> res = copyMap(object);
 
   res[key] = value;
   return res;
