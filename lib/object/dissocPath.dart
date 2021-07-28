@@ -1,4 +1,4 @@
-import 'package:fp/fp.dart';
+import 'package:fp/curry/curry2.dart';
 import 'package:fp/function/copy.dart';
 import 'package:fp/list/list.dart';
 import 'package:fp/object/object.dart';
