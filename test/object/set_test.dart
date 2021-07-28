@@ -25,6 +25,10 @@ void main() {
     final newMap = set(['vars', 'x', 'y', 'values', -1, 'v'], 15, testMap);
 
     expect(testMap == newMap, false);
-    expect(testMap['const'] == newMap['const'], true);
+    expect(testMap['const'], newMap['const']);
+    expect(testMap['const']!['values'], newMap['const']['values']);
+    expect(testMap['vars']!['const'], newMap['vars']['const']);
+    expect((testMap['vars']!['const']! as dynamic)['values'],
+        newMap['vars']['const']["values"]);
   });
 }
