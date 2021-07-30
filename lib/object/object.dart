@@ -7,3 +7,4 @@ export 'dissocPath.dart';
 export 'eqProps.dart';
 export 'copyMap.dart';
 export 'copySet.dart';
+export 'evolve.dart';
