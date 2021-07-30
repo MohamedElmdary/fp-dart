@@ -31,3 +31,4 @@ export 'transduce.dart';
 export 'xprod.dart';
 export 'removeAt.dart';
 export 'copyList.dart';
+export 'invertList.dart';
