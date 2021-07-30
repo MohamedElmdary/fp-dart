@@ -15,3 +15,4 @@ export 'mapObjIndexed.dart';
 export 'deepMerge.dart';
 export 'mergeWithKey.dart';
 export 'objOf.dart';
+export 'omit.dart';
