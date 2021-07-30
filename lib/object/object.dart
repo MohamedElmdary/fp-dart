@@ -16,3 +16,4 @@ export 'deepMerge.dart';
 export 'mergeWithKey.dart';
 export 'objOf.dart';
 export 'omit.dart';
+export 'omitPaths.dart';
