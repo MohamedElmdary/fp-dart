@@ -1,5 +1,4 @@
 import 'package:fp/curry/curry2.dart';
-import 'package:fp/function/function.dart';
 import 'package:fp/list/map.dart';
 import 'package:fp/object/object.dart';
 
