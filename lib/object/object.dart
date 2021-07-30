@@ -13,3 +13,4 @@ export 'hasPath.dart';
 export 'invert.dart';
 export 'mapObjIndexed.dart';
 export 'deepMerge.dart';
+export 'mergeWithKey.dart';
