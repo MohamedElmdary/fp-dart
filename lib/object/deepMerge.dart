@@ -1,3 +1,4 @@
+import 'package:fp/curry/curry2.dart';
 import 'package:fp/function/function.dart';
 
 Map deepMerge(Map object, Map mergeFrom) {
@@ -15,3 +16,6 @@ Map deepMerge(Map object, Map mergeFrom) {
 
   return next(object, mergeFrom);
 }
+
+final deepMergeC = curry2(deepMerge);
+final deepMergeCR = curry2R(deepMerge);
