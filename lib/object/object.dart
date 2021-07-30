@@ -26,3 +26,4 @@ export 'props.dart';
 export 'toPairs.dart';
 export 'values.dart';
 export 'keys.dart';
+export 'whereEq.dart';

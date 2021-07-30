@@ -1,3 +1,4 @@
+import 'package:fp/curry/curry2.dart';
 import 'package:fp/object/object.dart';
 
 bool where(Map predicate, Map object) {
@@ -31,3 +32,6 @@ bool where(Map predicate, Map object) {
 
   return next(predicate, object);
 }
+
+final whereC = curry2(where);
+final whereCR = curry2R(where);
