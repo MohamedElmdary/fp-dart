@@ -5,3 +5,4 @@ export 'max.dart';
 export 'countBy.dart';
 export 'difference.dart';
 export 'differenceWith.dart';
+export 'eqBy.dart';
