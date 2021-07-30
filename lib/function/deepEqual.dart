@@ -67,4 +67,3 @@ bool deepEqual(dynamic x, dynamic y) {
 }
 
 final deepEqualC = curry2(deepEqual);
-final deepEqualCR = curry2R(deepEqual);
