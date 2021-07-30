@@ -12,3 +12,4 @@ export 'copy.dart';
 export 'deepCopy.dart';
 export 'ascend.dart';
 export 'descend.dart';
+export 'deepEqual.dart';
