@@ -9,3 +9,4 @@ export 'copyMap.dart';
 export 'copySet.dart';
 export 'evolve.dart';
 export 'has.dart';
+export 'hasPath.dart';
