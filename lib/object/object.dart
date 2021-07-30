@@ -22,3 +22,4 @@ export 'pick.dart';
 export 'pickAll.dart';
 export 'pickBy.dart';
 export 'project.dart';
+export 'props.dart';
