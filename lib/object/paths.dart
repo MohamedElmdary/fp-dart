@@ -3,7 +3,7 @@ import 'package:fp/function/function.dart';
 import 'package:fp/list/map.dart';
 import 'package:fp/object/path.dart';
 
-dynamic paths(List<List<dynamic>> pathList, Map object) {
+List paths(List<List<dynamic>> pathList, Map object) {
   return composeC(map(pathList, pathC))(object);
 }
 
