@@ -18,3 +18,4 @@ export 'objOf.dart';
 export 'omit.dart';
 export 'omitPaths.dart';
 export 'paths.dart';
+export 'pick.dart';
