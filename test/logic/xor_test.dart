@@ -7,11 +7,5 @@ void main() {
     expect(xor(true, true), false);
     expect(xor(false, true), true);
     expect(xor(true, false), true);
-    expect(xor([], {}), false);
-    expect(xor([], false), true);
-    expect(xor({}, false), true);
-    expect(xor('', false), false);
-    expect(xor(' ', false), true);
-    expect(xor({}, true), false);
   });
 }
