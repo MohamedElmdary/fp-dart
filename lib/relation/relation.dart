@@ -7,3 +7,4 @@ export 'difference.dart';
 export 'differenceWith.dart';
 export 'eqBy.dart';
 export 'gt.dart';
+export 'gte.dart';
