@@ -6,7 +6,7 @@ R until<T, R>(
   R Function(dynamic) transformer,
   T value,
 ) {
-  final _p = not(predicate);
+  final _p = notC(predicate);
 
   dynamic res = value;
   while (_p(res)) {
