@@ -1,10 +1,15 @@
-import 'package:fp/function/function.dart';
 import 'package:fp/list/list.dart';
 import 'package:fp/types/curryFn.dart';
 
 bool allPass<T>(List<bool Function(T)> fns, List<T> list) {
-  final predicate = composeC<T, bool>(fns);
-  return all(predicate, list);
+  int i = -1;
+  while (++i < fns.length) {
+    if (!all(fns[i], list)) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 CurryFn<List<T>, bool> allPassC<T>(List<bool Function(T)> fns) {
