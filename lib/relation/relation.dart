@@ -10,3 +10,4 @@ export 'gt.dart';
 export 'gte.dart';
 export 'lt.dart';
 export 'lte.dart';
+export 'innerJoin.dart';
