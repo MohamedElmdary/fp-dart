@@ -5,7 +5,8 @@ bool toBool(dynamic value) {
     return value;
   }
 
-  final res = (value == null) ||
+  final res = (value == 0) ||
+      (value == null) ||
       (isNan(value)) ||
       (value is String && value.length == 0);
 
