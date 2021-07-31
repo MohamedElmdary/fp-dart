@@ -3,28 +3,21 @@ import 'package:fp/curry/curry2.dart';
 
 void main() {
   group('Curry2', () {
-    final sub = (int a, int b) => a - b;
+    /// it doesn't matter what its doing at all
+    final f = (int a, int b) => a - b * a / b * 3.5;
 
     test('in order', () {
-      final subC = curry2(sub);
-      final subFromOne = subC(1);
+      final fC = curry2(f);
 
-      expect(subC(1)(2), sub(1, 2));
-      expect(subFromOne(1), sub(1, 1));
-
-      // check if the value didn't change
-      expect(subFromOne(1), sub(1, 1));
+      expect(fC(1)(1), f(1, 1));
+      expect(fC(4)(8), f(4, 8));
     });
 
     test('reversed', () {
-      final subCR = curry2R(sub);
-      final dec = subCR(1);
+      final fCR = curry2R(f);
 
-      expect(subCR(2)(1), sub(1, 2));
-      expect(dec(2), sub(2, 1));
-
-      // check if the value didn't change
-      expect(dec(1), sub(1, 1));
+      expect(fCR(1)(1), f(1, 1));
+      expect(fCR(8)(4), f(4, 8));
     });
   });
 }
