@@ -27,9 +27,7 @@ dynamic path(List<dynamic> pathList, dynamic object) {
       continue;
     }
 
-    throw Exception(
-      'Expected String, Map or List but got ${obj.runtimeType} with key of type ${key.runtimeType}',
-    );
+    return null;
   }
 
   return obj;
