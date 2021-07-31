@@ -1,4 +1,3 @@
-import 'package:fp/curry/curry3.dart';
 import 'package:fp/object/prop.dart';
 
 mixin Comparator {
@@ -9,41 +8,38 @@ mixin Comparator {
   bool mapC(Map x, Map y);
 }
 
-bool compare(
-  Comparator c,
-  dynamic maybeGreat,
-  dynamic maybeLess,
-) {
-  if (maybeGreat.runtimeType != maybeLess.runtimeType) {
-    throw Exception('`gt` Expected the same type to be compared.');
+bool Function(dynamic, dynamic) compare(Comparator c) {
+  bool next(dynamic x, dynamic y) {
+    if (x.runtimeType != y.runtimeType) {
+      throw Exception('`gt` Expected the same type to be compared.');
+    }
+
+    if (x is num) {
+      return c.numC(x, y);
+    }
+
+    if (x is bool) {
+      return c.boolC(x, y);
+    }
+
+    if (x is String) {
+      return c.stringC(x, y);
+    }
+
+    if (x is List || x is Set) {
+      return c.listC(x, y);
+    }
+
+    if (x is Map) {
+      return c.mapC(x, y);
+    }
+
+    if (x is ItoMap) {
+      return next(x.toMap(), y.toMap());
+    }
+
+    throw Exception('unexpected type ${x.runtimeType}.');
   }
 
-  if (maybeGreat is num) {
-    return c.numC(maybeGreat, maybeLess);
-  }
-
-  if (maybeGreat is bool) {
-    return c.boolC(maybeGreat, maybeLess);
-  }
-
-  if (maybeGreat is String) {
-    return c.stringC(maybeGreat, maybeLess);
-  }
-
-  if (maybeGreat is List || maybeGreat is Set) {
-    return c.listC(maybeGreat, maybeLess);
-  }
-
-  if (maybeGreat is Map) {
-    return c.mapC(maybeGreat, maybeLess);
-  }
-
-  if (maybeGreat is ItoMap) {
-    return compare(c, maybeGreat.toMap(), maybeLess.toMap());
-  }
-
-  throw Exception('unexpected type ${maybeGreat.runtimeType}.');
+  return next;
 }
-
-final compareC = curry3(compare);
-final compareCR = curry3R(compare);
