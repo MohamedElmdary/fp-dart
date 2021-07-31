@@ -1,5 +1,3 @@
-import 'package:fp/logic/logic.dart';
-
-bool xor(dynamic x, dynamic y) {
-  return toBool(x) != toBool(y);
+bool xor(bool x, bool y) {
+  return x != y;
 }
