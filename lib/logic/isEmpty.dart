@@ -1,5 +1,5 @@
 bool isEmpty(dynamic value) {
-  if (value is List || value is String) {
+  if (value is List || value is String || value is Set) {
     return value.length == 0;
   }
 
