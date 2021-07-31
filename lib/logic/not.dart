@@ -1,7 +1,8 @@
-bool Function(T) not<T>(bool Function(T) predicate) {
-  bool next(T arg) {
-    return !predicate(arg);
-  }
+import 'package:fp/curry/curry2.dart';
 
-  return next;
+bool not(Function predicate, [dynamic value]) {
+  return !predicate(value);
 }
+
+final notC = curry2(not);
+final notCR = curry2R(not);
