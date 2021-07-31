@@ -1,8 +1,11 @@
 import 'package:fp/object/prop.dart';
 
-mixin Comparator {
+abstract class Comparator {
+  bool boolC(bool x, bool y) {
+    return numC(x ? 1 : 0, y ? 1 : 0);
+  }
+
   bool numC(num x, num y);
-  bool boolC(bool x, bool y);
   bool stringC(String x, String y);
   bool listC(dynamic x, dynamic y);
   bool mapC(Map x, Map y);
