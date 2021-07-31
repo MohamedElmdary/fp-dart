@@ -15,3 +15,4 @@ export 'descend.dart';
 export 'deepEqual.dart';
 export 'compare.dart';
 export 'itSelf.dart';
+export 'toInt.dart';
