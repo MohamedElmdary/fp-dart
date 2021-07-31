@@ -13,3 +13,4 @@ export 'lte.dart';
 export 'innerJoin.dart';
 export 'maxBy.dart';
 export 'minBy.dart';
+export 'pathEq.dart';
