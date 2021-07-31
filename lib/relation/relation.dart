@@ -8,3 +8,5 @@ export 'differenceWith.dart';
 export 'eqBy.dart';
 export 'gt.dart';
 export 'gte.dart';
+export 'lt.dart';
+export 'lte.dart';
