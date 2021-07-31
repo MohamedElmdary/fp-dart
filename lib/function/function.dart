@@ -14,3 +14,4 @@ export 'ascend.dart';
 export 'descend.dart';
 export 'deepEqual.dart';
 export 'compare.dart';
+export 'itSelf.dart';

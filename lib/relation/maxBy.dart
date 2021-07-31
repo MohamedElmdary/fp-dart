@@ -2,7 +2,7 @@ import 'package:fp/curry/curry2.dart';
 import 'package:fp/list/list.dart';
 
 num maxBy(
-  num Function(num) transformer,
+  Function(num) transformer,
   List<num> nums,
 ) {
   if (nums.length == 0) {
