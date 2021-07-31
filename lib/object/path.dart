@@ -1,6 +1,6 @@
 import 'package:fp/curry/curry2.dart';
 
-dynamic path(List<dynamic> pathList, Map object) {
+dynamic path(List<dynamic> pathList, dynamic object) {
   if (pathList.length == 0) {
     return object;
   }
