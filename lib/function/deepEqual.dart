@@ -1,13 +1,16 @@
 import 'package:fp/curry/curry2.dart';
 import 'package:fp/object/keys.dart';
 import 'package:fp/object/prop.dart';
+import 'package:fp/relation/relation.dart';
 
 bool deepEqual(dynamic x, dynamic y) {
-  if (x == y) return true;
+  if (x == y || (isNan(x) && isNan(y))) return true;
 
-  if (x is Map) return _deepEqualMap(x, y);
-  if (x is Set || x is List) return _deepEqualList(x.toList(), y.toList());
-  if (x is ItoMap) return _deepEqualMap(x.toMap(), y.toMap());
+  if (x is Map && y is Map) return _deepEqualMap(x, y);
+  if (x is ItoMap && y is ItoMap) return _deepEqualMap(x.toMap(), y.toMap());
+  if ((x is Set && y is Set) || (x is List && y is List)) {
+    return _deepEqualList(x.toList(), y.toList());
+  }
 
   return false;
 }
