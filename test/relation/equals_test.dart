@@ -1,60 +1,43 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fp/relation/equals.dart' as eq;
+import 'package:fp/relation/equals.dart' as fp;
 
 void main() {
-  test('Should match int.', () {
-    // regular
-    expect(eq.equals(1, 1), true);
-    expect(eq.equals(1, 2), false);
+  group('Equals', () {
+    final eq = fp.equals;
+    final eqC = fp.equalsC;
 
-    // curry
-    final eq1 = eq.equalsC(1);
-    expect(eq1(1), true);
-    expect(eq1(2), false);
-  });
+    final m = {};
+    final s = new Set();
+    final l = [];
 
-  test('Should match double/double & double/int.', () {
-    // regular
-    expect(eq.equals(1.0, 1.0), true);
-    expect(eq.equals(1.0, 1), true);
-    expect(eq.equals(1.0, 2.0), false);
-    expect(eq.equals(1.0, 2), false);
+    test('regular', () {
+      expect(eq(m, m), true);
+      expect(eq(m, {}), false);
+      expect(eq(l, l), true);
+      expect(eq(l, []), false);
+      expect(eq(s, s), true);
+      expect(eq(s, new Set()), false);
+      expect(eq(1, 1), true);
+      expect(eq(1, 0), false);
+      expect(eq(double.nan.toString(), "NaN"), true);
+      expect(eq(double.nan, double.nan), false);
+      expect(eq(true, true), true);
+      expect(eq(true, false), false);
+    });
 
-    // curry
-    final eq1 = eq.equalsC(1.0);
-    expect(eq1(1.0), true);
-    expect(eq1(1), true);
-    expect(eq1(2.0), false);
-    expect(eq1(2), false);
-  });
-
-  test('Should match String.', () {
-    // regular
-    expect(eq.equals('x', 'x'), true);
-
-    // curry
-    final eqX = eq.equalsC('x');
-    expect(eqX('x'), true);
-  });
-
-  test('Should match ByRef.', () {
-    List list = ['x'];
-    Map map = {};
-
-    // regular
-    expect(eq.equals(list, list), true);
-    expect(eq.equals([], []), false);
-
-    expect(eq.equals(map, map), true);
-    expect(eq.equals(map, {}), false);
-
-    // curry
-    final eqList = eq.equalsC(list);
-    expect(eqList([]), false);
-    expect(eqList(list), true);
-
-    final eqMap = eq.equalsC(map);
-    expect(eqMap(map), true);
-    expect(eqMap({}), false);
+    test('curry in order', () {
+      expect(eqC(m)(m), true);
+      expect(eqC(m)({}), false);
+      expect(eqC(l)(l), true);
+      expect(eqC(l)([]), false);
+      expect(eqC(s)(s), true);
+      expect(eqC(s)(new Set()), false);
+      expect(eqC(1)(1), true);
+      expect(eqC(1)(0), false);
+      expect(eqC(double.nan.toString())("NaN"), true);
+      expect(eqC(double.nan)(double.nan), false);
+      expect(eqC(true)(true), true);
+      expect(eqC(true)(false), false);
+    });
   });
 }
