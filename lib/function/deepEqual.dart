@@ -7,7 +7,11 @@ bool deepEqual(dynamic x, dynamic y) {
     return true;
   }
 
-  if (x.runtimeType != y.runtimeType) {
+  if (x.runtimeType != y.runtimeType ||
+      !(x is Map) ||
+      !(x is List) ||
+      !(x is Set) ||
+      !(x is ItoMap)) {
     return false;
   }
 
@@ -54,11 +58,11 @@ bool deepEqual(dynamic x, dynamic y) {
       return false;
     }
 
-    return deepEqual(x.toList(), y.toList());
+    return deepEqual((x as dynamic).toList(), y.toList());
   }
 
   if (x is ItoMap && y is ItoMap) {
-    return deepEqual(x.toMap(), y.toMap());
+    return deepEqual((x as dynamic).toMap(), y.toMap());
   }
 
   throw Exception(
