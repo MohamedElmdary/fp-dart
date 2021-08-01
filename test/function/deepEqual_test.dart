@@ -13,6 +13,7 @@ void main() {
         'w': {'value': 5},
       },
       'q': Set.from([1, 2]),
+      'z': double.nan
     };
 
     final m2 = {
@@ -25,6 +26,7 @@ void main() {
           }
         },
       },
+      'z': double.nan
     };
 
     final m3 = {
