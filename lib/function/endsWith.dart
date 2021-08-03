@@ -1,12 +1,9 @@
-
 import 'package:fp/curry/curry2.dart';
 
 bool endsWith(dynamic w, dynamic idxable) {
-  if (
-    (w.runtimeType != idxable.runtimeType) ||
-    (!(w is String && idxable is String) && !(w is List && idxable is List)) ||
-    (w.length > idxable.length)
-  ) {
+  if ((!(w is String && idxable is String) &&
+          !(w is List && idxable is List)) ||
+      (w.length < idxable.length)) {
     return false;
   }
 
