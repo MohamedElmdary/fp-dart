@@ -5,7 +5,7 @@ List<T> dropLastWhile<T>(List<T> list, bool Function(T) predicate) {
   int i = list.length;
   while (--i >= 0) {
     if (!predicate(list[i])) {
-      return dropLast(list, i);
+      return dropLast(list, i - 1);
     }
   }
   return [];
