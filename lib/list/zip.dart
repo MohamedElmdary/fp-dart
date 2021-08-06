@@ -4,7 +4,11 @@ import 'package:fp/types/curryFn.dart';
 class Tuple<X, Y> {
   final X x;
   final Y y;
-  Tuple(this.x, this.y);
+  const Tuple(this.x, this.y);
+
+  List toList() {
+    return [x, y];
+  }
 }
 
 List<Tuple<T, R>> zip<T, R>(List<T> list1, List<R> list2) {
