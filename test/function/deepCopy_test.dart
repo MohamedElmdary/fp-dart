@@ -2,27 +2,54 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fp/function/deepCopy.dart';
 
 void main() {
-  test('Should copy all values.', () {
-    final map = {
-      "values": [
-        {"v": 0}
+  group('DeepCopy', () {
+    final Map m = {
+      'l': [
+        {
+          'v': {'z': 5}
+        }
       ],
-      "sets": {
-        "values": Set.from([0, 1, 2]),
-      }
+      's': new Set(),
+      'm': {},
+      'nan': double.nan,
+      'x': 5
     };
-    final copy = deepCopy(map);
 
-    expect(map != copy, true);
+    test('regular', () {
+      final copy = deepCopy(m);
+      expect(m != copy, true);
 
-    final v1 = map['values'] as List;
-    final v2 = copy['values'] as List;
-    expect(v1 != v2, true);
-    expect(v1[0] != v2[0], true);
+      final List l1 = m['l'];
+      final List l2 = copy['l'];
+      expect(l1 != l2, true);
 
-    final s1 = map['sets'] as Map;
-    final s2 = copy['sets'] as Map;
-    expect(s1 != s2, true);
-    expect(s1['values'] != s2['values'], true);
+      final l1f = l1.first;
+      final l2f = l2.first;
+      expect(l1f != l2f, true);
+
+      final v1 = l1f['v'];
+      final v2 = l2f['v'];
+      expect(v1 != v2, true);
+
+      final z1 = v1['z'];
+      final z2 = v2['z'];
+      expect(z1 == z2, true);
+
+      final s1 = m['s'];
+      final s2 = copy['s'];
+      expect(s1 != s2, true);
+
+      final m1 = m['m'];
+      final m2 = copy['m'];
+      expect(m1 != m2, true);
+
+      final nan1 = m['nan'];
+      final nan2 = copy['nan'];
+      expect(nan1 != nan2, true);
+
+      final x1 = m['x'];
+      final x2 = copy['x'];
+      expect(x1 == x2, true);
+    });
   });
 }
