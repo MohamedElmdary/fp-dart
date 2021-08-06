@@ -1,23 +1,10 @@
 import 'package:fp/relation/equals.dart';
-import 'package:fp/types/curryFn.dart';
+import 'package:fp/curry/curry2.dart';
 import 'list.dart';
 
-bool contains<T>(List<T> list, T item) {
+bool contains(List list, dynamic item) {
   return any(list, equalsC(item));
 }
 
-CurryFn<T, bool> containsC<T>(List<T> list) {
-  bool next(T item) {
-    return contains(list, item);
-  }
-
-  return next;
-}
-
-CurryFn<List<T>, bool> containsCR<T>(T item) {
-  bool next(List<T> list) {
-    return contains(list, item);
-  }
-
-  return next;
-}
+final containsC = curry2(contains);
+final containsCR = curry2R(contains);
