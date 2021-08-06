@@ -1,32 +1,21 @@
-import 'package:fp/types/curryFn.dart';
+import 'package:fp/curry/curry2.dart';
 
-List<Return> pluck<Index, Source, Return>(Index index, List<Source> source) {
-  if (!(source.first is List && index is int) &&
-      !(source.first is Map && index is String)) {
-    return [];
+List pluck(dynamic index, List source) {
+  dynamic k = index;
+
+  if (k is int && k < 0) {
+    k += source.length;
   }
 
-  final List<Return> res = [];
+  List res = [];
+
   int i = -1;
   while (++i < source.length) {
-    res.add((source[i] as dynamic)[index]);
+    res.add(source[i][k]);
   }
+
   return res;
 }
 
-CurryFn<List<Source>, List<Return>> pluckC<Index, Source, Return>(Index index) {
-  List<Return> next(List<Source> source) {
-    return pluck(index, source);
-  }
-
-  return next;
-}
-
-CurryFn<Index, List<Return>> pluckCR<Index, Source, Return>(
-    List<Source> source) {
-  List<Return> next(Index index) {
-    return pluck(index, source);
-  }
-
-  return next;
-}
+final pluckC = curry2(pluck);
+final pluckCR = curry2R(pluck);
