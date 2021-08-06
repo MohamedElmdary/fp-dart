@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fp/list/all.dart';
 
 void main() {
-  group('Compare', () {
+  group('All', () {
     final eq3 = (int v) => v == 3;
 
     test('regular', () {
