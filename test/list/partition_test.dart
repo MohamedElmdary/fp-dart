@@ -9,7 +9,6 @@ void main() {
     test('regular', () {
       final r = partition(s, l);
 
-      expect(l != r, true);
       expect(r.length, 2);
 
       final l1 = r.first;
@@ -25,7 +24,6 @@ void main() {
     test('curry in order', () {
       final r = partitionC(s)(l);
 
-      expect(l != r, true);
       expect(r.length, 2);
 
       final l1 = r.first;
@@ -41,7 +39,6 @@ void main() {
     test('curry reversed', () {
       final r = partitionCR(l)(s);
 
-      expect(l != r, true);
       expect(r.length, 2);
 
       final l1 = r.first;
