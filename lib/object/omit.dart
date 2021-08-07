@@ -1,26 +1,22 @@
 import 'package:fp/curry/curry2.dart';
+import 'package:fp/object/keys.dart';
 
-Map omit(List<String> path, Map map) {
-  Map next(Map obj, int i) {
-    final Map res = {};
-    final k = path[i];
+Map omit(Set<String> keysToOmit, Map map) {
+  final Map res = {};
+  final ks = keys(map);
 
-    obj.forEach((key, item) {
-      if (key == k) {
-        if (item is Map) {
-          res[key] = next(item, i + 1);
-        }
+  int i = -1;
+  while (++i < ks.length) {
+    final k = ks[i];
 
-        return;
-      }
+    if (keysToOmit.contains(k)) {
+      continue;
+    }
 
-      res[key] = item;
-    });
-
-    return res;
+    res[k] = map[k];
   }
 
-  return next(map, 0);
+  return res;
 }
 
 final omitC = curry2(omit);
