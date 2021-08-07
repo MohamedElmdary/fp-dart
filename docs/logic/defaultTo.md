@@ -10,12 +10,13 @@ Returns the second argument if it is not null or NaN; otherwise the first argume
 final m = {};
 final l = [];
 final s = new Set();
+final def = defaultToC('default');
 
-defaultTo('default', null); // 'default'
-defaultTo('default', double.nan); // 'default'
-defaultTo('default', false); // false
-defaultTo('default', 'str'); // 'str'
-defaultTo('default', m); // m
-defaultTo('default', s); // s
-defaultTo('default', l); // l
+def(null); // 'default'
+def(double.nan); // 'default'
+def(false); // false
+def('str'); // 'str'
+def(m); // m
+def(s); // s
+def(l); // l
 ```
