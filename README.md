@@ -4,12 +4,16 @@ A functional programming lib in dart highly inspired by ramda.js .
 
 ## Note
 
-Most functions in fp_dart has 3 version (regular / curry in order / curry reversed)  
-for e.g `allPass` Function: - `allPass` is regular - `allPassC` is curry in order - `allPassCR` is curry reversed
+Most functions in fp_dart has 3 versions (regular / curry in order / curry reversed)  
+for e.g `allPass` Function:
 
-## why 3 version ?
+-   `allPass` is regular
+-   `allPassC` is curry in order
+-   `allPassCR` is curry reversed
 
-Because dart language doesn't offer a way for overloading function (issue [1122](https://github.com/dart-lang/language/issues/1122)) other than using `dynamic` everywhere in code that's why I thought it would make sense to have 3 version with types.
+## why 3 versions ?
+
+Because dart language doesn't offer a way for overloading function (issue [1122](https://github.com/dart-lang/language/issues/1122)) other than using `dynamic` everywhere in code that's why I thought it would make sense to have 3 versions with types.
 
 ## Docs
 
