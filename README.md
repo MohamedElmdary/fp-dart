@@ -27,7 +27,7 @@ Because dart language doesn't offer a way for overloading function (issue [1122]
     -   [defaultTo](/docs/logic/defaultTo.md)
     -   [isEmpty](/docs/logic/isEmpty.md)
     -   [not](/docs/logic/not.md)
-    -   [of](/docs/logic/of.md)
+    -   [or](/docs/logic/or.md)
     -   [propSatisfies](/docs/logic/propSatisfies.md)
     -   [toBool](/docs/logic/toBool.md)
     -   [unless](/docs/logic/unless.md)
