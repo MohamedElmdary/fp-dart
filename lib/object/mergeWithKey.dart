@@ -1,4 +1,5 @@
 import 'package:fp/curry/curry3.dart';
+import 'package:fp/object/copyMap.dart';
 
 Map mergeWithKey(
   Function(dynamic, dynamic, dynamic) transformer,
@@ -6,7 +7,7 @@ Map mergeWithKey(
   Map mergeFrom,
 ) {
   dynamic next(dynamic obj, dynamic from) {
-    final Map res = {};
+    final Map res = copyMap(from);
 
     obj.keys.forEach((k) {
       if (!from.containsKey(k)) {
