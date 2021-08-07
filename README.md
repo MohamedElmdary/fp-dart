@@ -2,124 +2,133 @@
 
 A functional programming lib in dart highly inspired by ramda.js .
 
-## Table of contents
+## Note
 
--   logic
-    -   allPass
-    -   and
-    -   anyPass
-    -   both
-    -   complement
-    -   cond
-    -   defaultTo
-    -   isEmpty
-    -   not
-    -   of
-    -   propSatisfies
-    -   toBool
-    -   unless
-    -   until
-    -   xor
--   relation
-    -   equals
-    -   countBy
-    -   difference
-    -   differenceWith
-    -   eqBy
-    -   gt
-    -   gte
-    -   lt
-    -   lte
-    -   isNan
-    -   max
-    -   maxBy
-    -   min
-    -   minBy
-    -   innerJoin
-    -   pathEq
--   math
-    -   add
-    -   dec
-    -   divide
-    -   inc
-    -   mean
-    -   modulo
-    -   multiply
-    -   negate
-    -   product
-    -   subtract
-    -   median
--   list
-    -   all
-    -   any
-    -   append
-    -   concat
-    -   contains
-    -   copyList
-    -   drop
-    -   dropWhile
-    -   dropLast
-    -   dropLastWhile
-    -   filter
-    -   map
-    -   reduce
-    -   join
-    -   find
-    -   findIndex
-    -   findLast
-    -   findLastIndex
-    -   flatten
-    -   range
-    -   forEach
-    -   fromPairs
-    -   groupBy
-    -   insertAll
-    -   intersperse
-    -   invertList
-    -   mergeAll
-    -   partition
-    -   pluck
-    -   reduceRight
-    -   removeAt
-    -   transduce
-    -   xprod
-    -   zip
--   object
-    -   assoc
-    -   copyMap
-    -   copySet
-    -   deepMerge
-    -   dissoc
-    -   dissocPath
-    -   eqProps
-    -   evolve
-    -   has
-    -   hasPath
-    -   invert
-    -   keys
-    -   mapObjIndexed
-    -   mergeWithKey
-    -   objOf
-    -   omit
-    -   omitPaths
-    -   path
-    -   paths
-    -   pick
-    -   pickAll
-    -   pickBy
-    -   project
-    -   prop
-    -   props
-    -   set
-    -   toPairs
-    -   values
-    -   where
-    -   whereEq
--   curry
-    -   Curry2
-    -   Curry3
-    -   Curry4
-    -   Curry5
+Most functions in fp_dart has 3 version (regular / curry in order / curry reversed)  
+for e.g `allPass` Function: - `allPass` is regular - `allPassC` is curry in order - `allPassCR` is curry reversed
+
+## why 3 version ?
+
+Because dart language doesn't offer a way for overloading function (issue [1122](https://github.com/dart-lang/language/issues/1122)) other than using `dynamic` everywhere in code that's why I thought it would make sense to have 3 version with types.
+
+## Docs
+
+-   [Logic Lib](/tree/master/docs/logic)
+    -   [allPass](/blob/master/docs/logic/allPass.md)
+    -   [and](/blob/master/docs/logic/and.md)
+    -   [anyPass](/blob/master/docs/logic/anyPass.md)
+    -   [both](/blob/master/docs/logic/both.md)
+    -   [complement](/blob/master/docs/logic/complement.md)
+    -   [cond](/blob/master/docs/logic/cond.md)
+    -   [defaultTo](/blob/master/docs/logic/defaultTo.md)
+    -   [isEmpty](/blob/master/docs/logic/isEmpty.md)
+    -   [not](/blob/master/docs/logic/not.md)
+    -   [of](/blob/master/docs/logic/of.md)
+    -   [propSatisfies](/blob/master/docs/logic/propSatisfies.md)
+    -   [toBool](/blob/master/docs/logic/toBool.md)
+    -   [unless](/blob/master/docs/logic/unless.md)
+    -   [until](/blob/master/docs/logic/until.md)
+    -   [xor](/blob/master/docs/logic/xor.md)
+-   [Relation Lib](/tree/master/docs/relation)
+    -   [equals](/blob/master/docs/relation/equals.md)
+    -   [countBy](/blob/master/docs/relation/countBy.md)
+    -   [difference](/blob/master/docs/relation/difference.md)
+    -   [differenceWith](/blob/master/docs/relation/differenceWith.md)
+    -   [eqBy](/blob/master/docs/relation/eqBy.md)
+    -   [gt](/blob/master/docs/relation/gt.md)
+    -   [gte](/blob/master/docs/relation/gte.md)
+    -   [lt](/blob/master/docs/relation/lt.md)
+    -   [lte](/blob/master/docs/relation/lte.md)
+    -   [isNan](/blob/master/docs/relation/isNan.md)
+    -   [max](/blob/master/docs/relation/max.md)
+    -   [maxBy](/blob/master/docs/relation/maxBy.md)
+    -   [min](/blob/master/docs/relation/min.md)
+    -   [minBy](/blob/master/docs/relation/minBy.md)
+    -   [innerJoin](/blob/master/docs/relation/innerJoin.md)
+    -   [pathEq](/blob/master/docs/relation/pathEq.md)
+-   [Math Lib](/tree/master/docs/math)
+    -   [add](/blob/master/docs/math/add.md)
+    -   [dec](/blob/master/docs/math/dec.md)
+    -   [divide](/blob/master/docs/math/divide.md)
+    -   [inc](/blob/master/docs/math/inc.md)
+    -   [mean](/blob/master/docs/math/mean.md)
+    -   [modulo](/blob/master/docs/math/modulo.md)
+    -   [multiply](/blob/master/docs/math/multiply.md)
+    -   [negate](/blob/master/docs/math/negate.md)
+    -   [product](/blob/master/docs/math/product.md)
+    -   [subtract](/blob/master/docs/math/subtract.md)
+    -   [median](/blob/master/docs/math/median.md)
+-   [List Lib](/tree/master/docs/list)
+    -   [all](/blob/master/docs/list/all.md)
+    -   [any](/blob/master/docs/list/any.md)
+    -   [append](/blob/master/docs/list/append.md)
+    -   [concat](/blob/master/docs/list/concat.md)
+    -   [contains](/blob/master/docs/list/contains.md)
+    -   [copyList](/blob/master/docs/list/copyList.md)
+    -   [drop](/blob/master/docs/list/drop.md)
+    -   [dropWhile](/blob/master/docs/list/dropWhile.md)
+    -   [dropLast](/blob/master/docs/list/dropLast.md)
+    -   [dropLastWhile](/blob/master/docs/list/dropLastWhile.md)
+    -   [filter](/blob/master/docs/list/filter.md)
+    -   [map](/blob/master/docs/list/map.md)
+    -   [reduce](/blob/master/docs/list/reduce.md)
+    -   [join](/blob/master/docs/list/join.md)
+    -   [find](/blob/master/docs/list/find.md)
+    -   [findIndex](/blob/master/docs/list/findIndex.md)
+    -   [findLast](/blob/master/docs/list/findLast.md)
+    -   [findLastIndex](/blob/master/docs/list/findLastIndex.md)
+    -   [flatten](/blob/master/docs/list/flatten.md)
+    -   [range](/blob/master/docs/list/range.md)
+    -   [forEach](/blob/master/docs/list/forEach.md)
+    -   [fromPairs](/blob/master/docs/list/fromPairs.md)
+    -   [groupBy](/blob/master/docs/list/groupBy.md)
+    -   [insertAll](/blob/master/docs/list/insertAll.md)
+    -   [intersperse](/blob/master/docs/list/intersperse.md)
+    -   [invertList](/blob/master/docs/list/invertList.md)
+    -   [mergeAll](/blob/master/docs/list/mergeAll.md)
+    -   [partition](/blob/master/docs/list/partition.md)
+    -   [pluck](/blob/master/docs/list/pluck.md)
+    -   [reduceRight](/blob/master/docs/list/reduceRight.md)
+    -   [removeAt](/blob/master/docs/list/removeAt.md)
+    -   [transduce](/blob/master/docs/list/transduce.md)
+    -   [xprod](/blob/master/docs/list/xprod.md)
+    -   [zip](/blob/master/docs/list/zip.md)
+-   [Object Lib](/tree/master/docs/object)
+    -   [assoc](/blob/master/docs/object/assoc.md)
+    -   [copyMap](/blob/master/docs/object/copyMap.md)
+    -   [copySet](/blob/master/docs/object/copySet.md)
+    -   [deepMerge](/blob/master/docs/object/deepMerge.md)
+    -   [dissoc](/blob/master/docs/object/dissoc.md)
+    -   [dissocPath](/blob/master/docs/object/dissocPath.md)
+    -   [eqProps](/blob/master/docs/object/eqProps.md)
+    -   [evolve](/blob/master/docs/object/evolve.md)
+    -   [has](/blob/master/docs/object/has.md)
+    -   [hasPath](/blob/master/docs/object/hasPath.md)
+    -   [invert](/blob/master/docs/object/invert.md)
+    -   [keys](/blob/master/docs/object/keys.md)
+    -   [mapObjIndexed](/blob/master/docs/object/mapObjIndexed.md)
+    -   [mergeWithKey](/blob/master/docs/object/mergeWithKey.md)
+    -   [objOf](/blob/master/docs/object/objOf.md)
+    -   [omit](/blob/master/docs/object/omit.md)
+    -   [omitPaths](/blob/master/docs/object/omitPaths.md)
+    -   [path](/blob/master/docs/object/path.md)
+    -   [paths](/blob/master/docs/object/paths.md)
+    -   [pick](/blob/master/docs/object/pick.md)
+    -   [pickAll](/blob/master/docs/object/pickAll.md)
+    -   [pickBy](/blob/master/docs/object/pickBy.md)
+    -   [project](/blob/master/docs/object/project.md)
+    -   [prop](/blob/master/docs/object/prop.md)
+    -   [props](/blob/master/docs/object/props.md)
+    -   [set](/blob/master/docs/object/set.md)
+    -   [toPairs](/blob/master/docs/object/toPairs.md)
+    -   [values](/blob/master/docs/object/values.md)
+    -   [where](/blob/master/docs/object/where.md)
+    -   [whereEq](/blob/master/docs/object/whereEq.md)
+-   [Curry Lib](/tree/master/docs/curry)
+    -   [Curry2](/blob/master/docs/curry/Curry2.md)
+    -   [Curry3](/blob/master/docs/curry/Curry3.md)
+    -   [Curry4](/blob/master/docs/curry/Curry4.md)
+    -   [Curry5](/blob/master/docs/curry/Curry5.md)
 
 ## Credits
 
