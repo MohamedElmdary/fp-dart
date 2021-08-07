@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fp/object/set.dart';
 
 void main() {
-  test('Should create a deep copy for the targeted value only.', () {
+  group('Props', () {
     final testMap = {
       "const": {
         "values": [0, 1, 2]
@@ -22,13 +22,17 @@ void main() {
       }
     };
 
-    final newMap = set(['vars', 'x', 'y', 'values', -1, 'v'], 15, testMap);
+    test('regular', () {
+      final newMap = set(['vars', 'x', 'y', 'values', -1, 'v'], 15, testMap);
 
-    expect(testMap == newMap, false);
-    expect(testMap['const'], newMap['const']);
-    expect(testMap['const']!['values'], newMap['const']['values']);
-    expect(testMap['vars']!['const'], newMap['vars']['const']);
-    expect((testMap['vars']!['const']! as dynamic)['values'],
-        newMap['vars']['const']["values"]);
+      expect(testMap == newMap, false);
+      expect(testMap['const'], newMap['const']);
+      expect(testMap['const']!['values'], newMap['const']['values']);
+      expect(testMap['vars']!['const'], newMap['vars']['const']);
+      expect((testMap['vars']!['const']! as dynamic)['values'],
+          newMap['vars']['const']["values"]);
+    });
+
+    /// skipped curry & curry reversed (using curry2 function).
   });
 }
