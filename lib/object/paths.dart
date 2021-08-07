@@ -4,7 +4,7 @@ import 'package:fp/list/map.dart';
 import 'package:fp/object/path.dart';
 
 List paths(List<List<dynamic>> pathList, Map object) {
-  return composeC(map(pathList, pathC))(object);
+  return juxtC(map(pathList, pathC))(object);
 }
 
 final pathsC = curry2(paths);
