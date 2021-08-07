@@ -1,9 +1,9 @@
 import 'package:fp/curry/curry2.dart';
 
-Map pickBy(bool Function(String) predicate, Map map) {
+Map pickBy(bool Function(dynamic, dynamic) predicate, Map map) {
   final Map res = {};
   map.keys.forEach((key) {
-    if (predicate(key)) {
+    if (predicate(map[key], key)) {
       res[key] = map[key];
     }
   });
