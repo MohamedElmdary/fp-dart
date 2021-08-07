@@ -1,6 +1,6 @@
 import 'package:fp/curry/curry2.dart';
 
-List<dynamic> juxt(List<Function> fns, List<dynamic> list) {
+List<dynamic> juxt(List<Function> fns, dynamic list) {
   final List<dynamic> res = [];
   int i = -1;
   while (++i < fns.length) {
