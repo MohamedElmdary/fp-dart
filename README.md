@@ -1,14 +1,126 @@
-# fp
+# fp dart
 
-A new Flutter package project.
+A functional programming lib in dart highly inspired by ramda.js .
 
-## Getting Started
+## Table of contents
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+-   logic
+    -   allPass
+    -   and
+    -   anyPass
+    -   both
+    -   complement
+    -   cond
+    -   defaultTo
+    -   isEmpty
+    -   not
+    -   of
+    -   propSatisfies
+    -   toBool
+    -   unless
+    -   until
+    -   xor
+-   relation
+    -   equals
+    -   countBy
+    -   difference
+    -   differenceWith
+    -   eqBy
+    -   gt
+    -   gte
+    -   lt
+    -   lte
+    -   isNan
+    -   max
+    -   maxBy
+    -   min
+    -   minBy
+    -   innerJoin
+    -   pathEq
+-   math
+    -   add
+    -   dec
+    -   divide
+    -   inc
+    -   mean
+    -   modulo
+    -   multiply
+    -   negate
+    -   product
+    -   subtract
+    -   median
+-   list
+    -   all
+    -   any
+    -   append
+    -   concat
+    -   contains
+    -   copyList
+    -   drop
+    -   dropWhile
+    -   dropLast
+    -   dropLastWhile
+    -   filter
+    -   map
+    -   reduce
+    -   join
+    -   find
+    -   findIndex
+    -   findLast
+    -   findLastIndex
+    -   flatten
+    -   range
+    -   forEach
+    -   fromPairs
+    -   groupBy
+    -   insertAll
+    -   intersperse
+    -   invertList
+    -   mergeAll
+    -   partition
+    -   pluck
+    -   reduceRight
+    -   removeAt
+    -   transduce
+    -   xprod
+    -   zip
+-   object
+    -   assoc
+    -   copyMap
+    -   copySet
+    -   deepMerge
+    -   dissoc
+    -   dissocPath
+    -   eqProps
+    -   evolve
+    -   has
+    -   hasPath
+    -   invert
+    -   keys
+    -   mapObjIndexed
+    -   mergeWithKey
+    -   objOf
+    -   omit
+    -   omitPaths
+    -   path
+    -   paths
+    -   pick
+    -   pickAll
+    -   pickBy
+    -   project
+    -   prop
+    -   props
+    -   set
+    -   toPairs
+    -   values
+    -   where
+    -   whereEq
+-   curry
+    -   Curry2
+    -   Curry3
+    -   Curry4
+    -   Curry5
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Credits
+
+-   [Mohamed Rabie Elmdary](https://github.com/MohamedElmdary)
